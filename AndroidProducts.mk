@@ -18,3 +18,6 @@
 
 PRODUCT_MAKEFILES := \
      $(LOCAL_DIR)/omni_J716F.mk
+
+COMMON_LUNCH_CHOICES := omni_J716F-userdebug
+COMMON_LUNCH_CHOICES := omni_J716F-eng

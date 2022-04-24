@@ -38,12 +38,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.kona
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.kona \
-    libgptutils \
-    libz \
-    libcutils
+PRODUCT_PACKAGES += \
+    bootctrl.sdm870 \
+    bootctrl.sdm970.recovery
 
+PRODUCT_SOONG_NAMESPACES += \
+	$(LOCAL_PATH)
+	
+PRODUCT_COPY_FILES += \
+    	$(OUT_DIR)/target/product/J716F/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+    
 PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \

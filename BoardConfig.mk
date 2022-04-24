@@ -41,7 +41,7 @@ TARGET_OTA_ASSERT_DEVICE := J716F
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600 # This is the maximum known partition size, but it can be higher, so we just omit it
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600 # This is the maximum known partition size, but it can be higher, so we just omit it
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -77,6 +77,9 @@ TARGET_KERNEL_CONFIG := J716F_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := kona
+
+# test event
+TWRP_EVENT_LOGGING := true
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
