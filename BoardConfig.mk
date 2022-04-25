@@ -89,6 +89,18 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hidl.base@1.0 \
+    ashmemd \
+    ashmemd_aidl_interface-cpp \
+    bootctrl.$(TARGET_BOARD_PLATFORM).recovery \
+    libashmemd_client \
+    libcap \
+    libion \
+    libpcrecpp \
+    libxml2
+
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
